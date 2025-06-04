@@ -8,7 +8,8 @@
 		"start": "bunx --bun vinxi start",
 		"generate-schemas": "drizzle-kit generate",
 		"apply-schemas": "drizzle-kit migrate",
-		"format": "biome check . --fix"
+		"format": "biome check . --fix",
+		"lint": "biome check ."
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
