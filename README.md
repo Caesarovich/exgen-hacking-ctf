@@ -35,3 +35,8 @@ Do not look at the source code if you want to play the challenge, as it will spo
 - [Solid Primitives](https://primitives.solidjs.community/) for some useful SolidJS primitives
 - [Drizzle](https://orm.drizzle.team/) for the database ORM
 - [SQLite](https://www.sqlite.org/index.html) for the database
+
+
+## License
+
+This project is licensed under the GPL-3.0 License - see the [LICENSE](LICENSE) file for details.
