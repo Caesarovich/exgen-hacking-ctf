@@ -8,7 +8,7 @@ I built an 'entirely' simulated environment with fake users, fake files, and fak
 
 ## Where to play
 
-You can find a live version of the challenge at :
+You can find a live version of the challenge at : https://exgen-ctf.caesarovich.xyz/
 
 Do not look at the source code if you want to play the challenge, as it will spoil the fun!
 
