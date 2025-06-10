@@ -22,7 +22,7 @@ ENV NODE_ENV=production
 WORKDIR /usr/src/app
 
 # Ensure bun user owns the app directory for write permissions
-RUN chown -R bun:bun /usr/src/app
+RUN mkdir -p /data && chown -R bun:bun /data
 
 # Copy package files
 COPY package.json bun.lockb* ./

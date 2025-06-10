@@ -32,7 +32,7 @@ Do not look at the source code if you want to play the challenge, as it will spo
 ```
 docker run -p 3000:3000 \
 	-e SESSION_SECRET=<min_32_char_long> \
-	-e DB_FILE_NAME=<file.sqlite> \
+	-e DB_FILE_NAME=/data/<file.sqlite> \
 	-e ADMIN_USERNAME=<username> \
 	-e ADMIN_PASSWORD=<password> \
 	exgen-hacking-challenge
