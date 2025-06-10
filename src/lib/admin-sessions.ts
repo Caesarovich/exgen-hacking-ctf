@@ -29,7 +29,10 @@ export async function login(username: string, password: string) {
 		},
 	});
 
-	if (username === "admin" && password === Bun.env.ADMIN_PASSWORD) {
+	if (
+		username === Bun.env.ADMIN_USERNAME &&
+		password === Bun.env.ADMIN_PASSWORD
+	) {
 		await session.update((data) => {
 			data.isAdmin = true;
 			return data;
