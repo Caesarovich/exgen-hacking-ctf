@@ -1,11 +1,11 @@
 #!/usr/bin/env bun
 
-import { drizzle } from "drizzle-orm/bun-sqlite";
-import { migrate } from "drizzle-orm/bun-sqlite/migrator";
-import config from "./drizzle.config";
 import { networkInterfaces } from "node:os";
 import { $ } from "bun";
 import chalk from "chalk";
+import { drizzle } from "drizzle-orm/bun-sqlite";
+import { migrate } from "drizzle-orm/bun-sqlite/migrator";
+import config from "./drizzle.config";
 
 async function migrateDatabase() {
 	try {
