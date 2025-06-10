@@ -14,12 +14,30 @@ Do not look at the source code if you want to play the challenge, as it will spo
 
 ## Setup locally
 
+
+### Build & Run locally with Bun
+
 1. Install [BunJS](https://bun.sh/)
 2. Clone the repository
 3. Run `bun install` to install the dependencies
 4. Run `bun run build` to build the project
 5. Run `bun run start.ts` to start the server
 6. Open your browser and go to `http://localhost:3000`
+
+### Build & Run locally with Docker
+1. Install [Docker](https://www.docker.com/)
+2. Clone the repository
+3. Run `docker build -t exgen-hacking-challenge .` to build the Docker image
+4. Run this command to start the Docker container, replacing the environment variables with your own values:
+```
+docker run -p 3000:3000 \
+	-e SESSION_SECRET=<min_32_char_long> \
+	-e DB_FILE_NAME=<file.sqlite> \
+	-e ADMIN_USERNAME=<username> \
+	-e ADMIN_PASSWORD=<password> \
+	exgen-hacking-challenge
+``` 
+5. Open your browser and go to `http://localhost:3000`
 
 ## Tech stack
 

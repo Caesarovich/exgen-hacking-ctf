@@ -10,10 +10,7 @@ import chalk from "chalk";
 async function migrateDatabase() {
 	try {
 		const db = drizzle(Bun.env.DB_FILE_NAME);
-		console.log(db);
 		console.log(chalk.blue("Starting database migration..."));
-
-		console.log(config);
 
 		migrate(db, {
 			migrationsFolder: config.out ?? "./drizzle",
