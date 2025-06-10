@@ -4,6 +4,7 @@ declare module "bun" {
 	interface Env {
 		SESSION_SECRET: string;
 		DB_FILE_NAME: string;
+		ADMIN_USERNAME: string;
 		ADMIN_PASSWORD: string;
 	}
 }
