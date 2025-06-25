@@ -103,7 +103,7 @@ const submitFlagAction = action(async (data: FormData) => {
 
 	revalidate("get-player");
 
-	return true;
+	return { flag } as { flag: string };
 });
 
 function FlagSubmission(props: FlagSubmissionProps) {
@@ -116,7 +116,12 @@ function FlagSubmission(props: FlagSubmissionProps) {
 	const valid = () => (submission.error?.message ? "invalid" : "valid");
 
 	createEffect(() => {
-		if (submission.result === true) setOpen(false);
+		if (submission.result?.flag) {
+			setOpen(false);
+			umami?.track("flag-successfuly-submitted", {
+				flag: submission.result.flag,
+			});
+		}
 	});
 
 	return (
